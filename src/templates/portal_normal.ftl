@@ -25,7 +25,7 @@
 <div class="d-flex flex-column min-vh-100">
 	<@liferay.control_menu />
 
-	<div class="d-flex flex-column flex-fill" id="wrapper">
+	<div class="d-flex flex-column flex-fill liferaybotics-b2b-theme-main-class" id="wrapper">
 		<#include "${full_templates_path}/portal_header.ftl" />
 
 		<section class="${portal_content_css_class} flex-fill" id="content">

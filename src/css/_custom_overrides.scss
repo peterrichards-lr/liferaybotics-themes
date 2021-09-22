@@ -1,0 +1,24 @@
+span.sign-in {
+    background-color: transparent;
+    color: inherit;
+
+    .lexicon-icon {
+        display: none;
+    }
+
+    .taglib-icon-label {
+        color: transparent;
+        position: relative;
+    }
+
+    .taglib-icon-label:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        content: 'Login';
+        color: black !important;
+        font-size: 0.875rem;
+        line-height: 0.75rem;
+        font-weight: 700;
+    }
+}
