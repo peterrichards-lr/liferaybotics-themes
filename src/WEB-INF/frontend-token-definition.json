@@ -154,7 +154,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "primary",
 							"mappings": [
@@ -167,7 +167,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#6b6c7e",
+							"defaultValue": "#2b395e",
 							"editorType": "ColorPicker",
 							"label": "secondary",
 							"mappings": [
@@ -232,7 +232,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#272833",
+							"defaultValue": "#3d3d40",
 							"editorType": "ColorPicker",
 							"label": "dark",
 							"mappings": [
@@ -245,7 +245,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#f1f2f5",
+							"defaultValue": "#ffffff",
 							"editorType": "ColorPicker",
 							"label": "light",
 							"mappings": [
@@ -414,7 +414,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#fff",
+							"defaultValue": "#f0f0f4",
 							"editorType": "ColorPicker",
 							"label": "body-bg",
 							"mappings": [
@@ -427,7 +427,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#272833",
+							"defaultValue": "#28282b",
 							"editorType": "ColorPicker",
 							"label": "body-color",
 							"mappings": [
@@ -704,7 +704,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+							"defaultValue": "'Open Sans', sans-serif",
 							"label": "font-family-sans-serif",
 							"mappings": [
 								{
@@ -716,7 +716,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+							"defaultValue": "'Roboto Mono', monospace",
 							"label": "font-family-monospace",
 							"mappings": [
 								{
@@ -728,7 +728,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+							"defaultValue": "'Open Sans'",
 							"label": "font-family-base",
 							"mappings": [
 								{
@@ -1168,7 +1168,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "background-color",
 							"mappings": [
@@ -1181,7 +1181,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "border-color",
 							"mappings": [
@@ -1207,7 +1207,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#0053f0",
+							"defaultValue": "rgba(113, 210, 232, 0.4)",
 							"editorType": "ColorPicker",
 							"label": "hover-background-color",
 							"mappings": [
@@ -1252,7 +1252,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "border-color",
 							"mappings": [
@@ -1265,7 +1265,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "color",
 							"mappings": [
@@ -1278,7 +1278,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#f0f5ff",
+							"defaultValue": "#fff",
 							"editorType": "ColorPicker",
 							"label": "hover-background-color",
 							"mappings": [
@@ -1291,7 +1291,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "hover-border-color",
 							"mappings": [
@@ -1304,7 +1304,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "hover-color",
 							"mappings": [
@@ -1336,7 +1336,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#cdced9",
+							"defaultValue": "#e8e9eC",
 							"editorType": "ColorPicker",
 							"label": "border-color",
 							"mappings": [
@@ -1349,7 +1349,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#6b6c7e",
+							"defaultValue": "#3d3d40",
 							"editorType": "ColorPicker",
 							"label": "color",
 							"mappings": [
@@ -1362,7 +1362,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#f7f8f9",
+							"defaultValue": "rgba(255, 255, 255, 0.4)",
 							"editorType": "ColorPicker",
 							"label": "hover-background-color",
 							"mappings": [
@@ -1375,7 +1375,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#cdced9",
+							"defaultValue": "transparent",
 							"editorType": "ColorPicker",
 							"label": "hover-border-color",
 							"mappings": [
@@ -1388,7 +1388,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#272833",
+							"defaultValue": "#3d3d40",
 							"editorType": "ColorPicker",
 							"label": "hover-color",
 							"mappings": [
@@ -1407,7 +1407,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#cdced9",
+							"defaultValue": "#fff",
 							"editorType": "ColorPicker",
 							"label": "border-color",
 							"mappings": [
@@ -1420,7 +1420,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#6b6c7e",
+							"defaultValue": "#2b395e",
 							"editorType": "ColorPicker",
 							"label": "color",
 							"mappings": [
@@ -1433,7 +1433,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "rgba(39, 40, 51, 0.03)",
+							"defaultValue": "rgba(255, 255, 255, 0.4)",
 							"editorType": "ColorPicker",
 							"label": "hover-background-color",
 							"mappings": [
@@ -1459,7 +1459,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#272833",
+							"defaultValue": "#2b395e",
 							"editorType": "ColorPicker",
 							"label": "hover-color",
 							"mappings": [
@@ -1478,7 +1478,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#0b5fff",
+							"defaultValue": "#71d2e8",
 							"editorType": "ColorPicker",
 							"label": "color",
 							"mappings": [
@@ -1491,7 +1491,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#004ad7",
+							"defaultValue": "#2b395e",
 							"editorType": "ColorPicker",
 							"label": "hover-color",
 							"mappings": [
