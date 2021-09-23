@@ -23,7 +23,9 @@
 <@liferay_util["include"] page=body_top_include />
 
 <div class="d-flex flex-column min-vh-100">
+<#if show_control_menu == true>
 	<@liferay.control_menu />
+</#if>
 
 	<div class="d-flex flex-column flex-fill liferaybotics-b2b-theme-main-class" id="wrapper">
 		<#include "${full_templates_path}/portal_header.ftl" />
