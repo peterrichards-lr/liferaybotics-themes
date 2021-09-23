@@ -1,6 +1,6 @@
-node_modules
-build
-dist
-liferay-theme.json
-.web_bundle_build
-.yo-rc.json
+themes/**/node_modules
+themes/**/build
+themes/**/dist
+themes/**/liferay-theme.json
+themes/**/.web_bundle_build
+themes/**/.yo-rc.json
