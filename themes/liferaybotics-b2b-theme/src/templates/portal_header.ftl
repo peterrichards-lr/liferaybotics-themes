@@ -1,7 +1,7 @@
         <#if show_header>
 			<header id="banner">
 				<div class="navbar upper-header upper-header-bg upper-header-text-color"  id="upperHeader">
-					<div class="container-fluid px-7">
+					<div class="bg-transparent container-fluid px-7">
 						<div class="align-items-center autofit-row">
 							<a class="${logo_css_class} align-items-center d-inline-flex logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
 								<img alt="${logo_description}" class="mr-2" height="24" src="${site_logo}" />
@@ -17,11 +17,13 @@
 								<@liferay.navigation_menu default_preferences="${preferences}" />
 							</div>
 
+							<#if show_header_search>
 							<div class="autofit-col d-none d-lg-inline-flex">
 								<button class="btn btn-unstyled btn-search" type="button" data-toggle="collapse" data-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
 									<@clay["icon"] symbol="search" />
 								</button>
 							</div>
+							</#if>
 
 							<div class="autofit-col d-none d-lg-inline-flex vl"></div>
 
@@ -58,11 +60,16 @@
 					</div>
 				</div>
 
-				<div class="collapse d-inline-flex d-lg-none" id="searchBar">
+				<#if show_header_search>
+				<div class="collapse md-hide" id="searchBar">
 					<#include "${full_templates_path}/search_bar.ftl" />
 				</div>
+				</#if>
 
-				<div class="navbar navbar-expand-md lower-header lower-header-bg lower-header-text-color" id="lowerHeader">
+				<div class="navbar lower-header lower-header-bg lower-header-text-color" id="lowerHeader">
+					<div class="bg-transparent container-fluid">
+						<#include "${full_templates_path}/navigation.ftl" />
+					</div>
 				</div>
 			</header>
 		</#if>

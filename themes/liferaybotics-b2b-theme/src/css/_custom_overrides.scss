@@ -113,8 +113,20 @@ header {
     }
 
     #searchBar {
+        @include media-breakpoint-down(md) {
+            display: none !important;
+        }
+
         form {
             width: calc(100vw - .5rem);
+        }
+    }
+
+    .lower-header {
+        .navbar {
+            @include media-breakpoint-up(lg) {
+                display: none !important;
+            }
         }
     }
 }
