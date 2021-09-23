@@ -1,24 +1,124 @@
-span.sign-in {
-    background-color: transparent;
-    color: inherit;
-
-    .lexicon-icon {
-        display: none;
-    }
-
-    .taglib-icon-label {
-        color: transparent;
-        position: relative;
-    }
-
-    .taglib-icon-label:after {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        content: 'Login';
-        color: black !important;
+header {
+    .upper-header {
+        min-height: calc(#{$siteLogoHeight} + 46px);
         font-size: 0.875rem;
-        line-height: 0.75rem;
-        font-weight: 700;
+        line-height: 1.5rem;
+        font-weight: 400;
+
+        .autofit-row {
+            gap: var(--spacer-2, 8px);
+            justify-content: space-between;
+
+            .navbar-menu {
+                .portlet {
+                    margin-bottom: unset;
+                }
+            }
+
+            .sign-in {
+                background-color: transparent;
+
+                .lexicon-icon {
+                    display: none;
+                }
+
+                .taglib-icon-label {
+                    color: transparent;
+                    position: relative;
+                    margin: unset;
+
+                    &:after {
+                        margin-left: -50%;
+                        content: "Log In";
+                        white-space: nowrap;
+                        line-height: 0.75rem;
+                        font-weight: 700;
+                        @include frontend-token(color, --primary, $primary);
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .vl {
+                height: calc((#{$siteLogoHeight} + 46px) / 2);
+                border-right-style: solid;
+                border-right-width: 1px;
+                @include frontend-token(border-right-color, --lower-header-text-color, $lowerHeaderTextColor);
+            }
+            
+            .user-personal-bar {
+                position: relative;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+
+                .notifications-count {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            .btn-search {
+                .lexicon-icon {
+                    @include frontend-token(fill, --upper-header-text-color, $upperHeaderTextColor);
+                    height: 1rem;
+                    width: 1rem;
+                }
+            }
+
+            .custom-logo {
+                color: inherit;
+
+                .site-name {
+                    font-size: 1.375rem;
+                    line-height: 1.375rem;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .navbar-site {
+                align-items: center;
+                text-align: center;
+                text-transform: capitalize;
+                font-weight: inherit;
+                justify-content: space-around;
+                margin: 0 2rem;
+
+                .nav-item {
+                    height: calc(#{$siteLogoHeight} + 46px);
+                    border-color: transparent;
+                    border-bottom-style: solid;
+                    border-bottom-width: 2px;
+
+                    &:hover {
+                        @include frontend-token(border-color, --primary, $primary);
+                        text-decoration: none;
+                    }
+
+                    a {
+                        color: inherit;
+                        padding: unset;
+                    }
+                }
+            }
+        }
     }
+
+    #searchBar {
+        form {
+            width: calc(100vw - .5rem);
+        }
+    }
+}
+
+footer {
+
 }

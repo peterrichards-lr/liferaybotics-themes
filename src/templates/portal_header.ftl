@@ -1,41 +1,68 @@
         <#if show_header>
 			<header id="banner">
-				<div class="navbar navbar-classic navbar-top py-3">
-					<div class="container user-personal-bar">
+				<div class="navbar upper-header upper-header-bg upper-header-text-color"  id="upperHeader">
+					<div class="container-fluid px-7">
 						<div class="align-items-center autofit-row">
-							<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
-								<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+							<a class="${logo_css_class} align-items-center d-inline-flex logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+								<img alt="${logo_description}" class="mr-2" height="24" src="${site_logo}" />
 
 								<#if show_site_name>
-									<h2 class="font-weight-bold h2 mb-0 text-dark" role="heading" aria-level="1">${site_name}</h2>
+									<h2 class="site-name d-sm-none d-none d-md-inline-flex" role="heading" aria-level="1">${site_name}</h2>
 								</#if>
 							</a>
 
 							<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
-							<div class="autofit-col autofit-col-expand">
-								<#include "${full_templates_path}/search_bar.ftl" />
+							<div class="autofit-col autofit-col-expand navbar-menu d-none d-lg-inline-flex">
+								<@liferay.navigation_menu default_preferences="${preferences}" />
 							</div>
 
-							<div class="autofit-col">
+							<div class="autofit-col d-none d-lg-inline-flex">
+								<button class="btn btn-unstyled btn-search" type="button" data-toggle="collapse" data-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
+									<@clay["icon"] symbol="search" />
+								</button>
+							</div>
+
+							<div class="autofit-col d-none d-lg-inline-flex vl"></div>
+
+							<div class="autofit-col user-personal-bar">
+								<#if is_signed_in>
+									<span class="user-full-name d-none d-md-inline-flex">
+										Hi&nbsp;${user.getFirstName()}
+									</span>
+								</#if>
+
 								<@liferay.user_personal_bar />
+
+								<#if is_signed_in>
+									<span>
+										<@clay["icon"] symbol="bell-on" />
+									</span>
+
+									<#assign otifications_link = "javascript:;"	/>
+
+									<#if notifications_portlet_url??>
+										<#assign notifications_link = notifications_portlet_url.toString() + "&_${notifications_portlet_namespace}_delta=${notifications_delta}&_${notifications_portlet_namespace}_cur=1" />
+									</#if>
+
+									<#if notifications_portlet_url?? && notifications_count gt 0>
+										<a href="javascript:;">
+											<span class="badge badge-danger notifications-count">
+												<span class="badge-item badge-item-expand">${notifications_count}</span>
+											</span>
+										</a>
+									</#if>
+								</#if>		
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="navbar navbar-classic navbar-expand-md navbar-light pb-3">
-					<div class="container">
-						<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs" href="${site_default_url}" rel="nofollow">
-							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+				<div class="collapse d-inline-flex d-lg-none" id="searchBar">
+					<#include "${full_templates_path}/search_bar.ftl" />
+				</div>
 
-							<#if show_site_name>
-								<h2 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h2>
-							</#if>
-						</a>
-
-						<#include "${full_templates_path}/navigation.ftl" />
-					</div>
+				<div class="navbar navbar-expand-md lower-header lower-header-bg lower-header-text-color" id="lowerHeader">
 				</div>
 			</header>
 		</#if>

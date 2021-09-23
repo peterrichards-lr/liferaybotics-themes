@@ -10,3 +10,7 @@
 <#else>
 	<#assign portal_content_css_class = "" />
 </#if>
+
+<#assign
+	notifications_count = 0
+/>
