@@ -241,25 +241,6 @@ header {
 
         .login-container {
             fieldset.fieldset {
-                .form-group:nth-child(1) {
-                    label.control-label {
-                        color: transparent;
-            
-                        &:after {
-                            margin-left: -55%;
-                            content: "Your E-mail";
-                            white-space: nowrap;
-                            line-height: 0.75rem;
-                            font-weight: 700;
-                            @include frontend-token(color, --black, $black);
-                        }
-                    }
-                }
-            }
-        }
-
-        .login-container {
-            fieldset.fieldset {
                 .form-group:nth-child(2) {
                     margin-bottom: unset;
                 }
