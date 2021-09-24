@@ -34,7 +34,16 @@
 									</span>
 								</#if>
 
-								<@liferay.user_personal_bar />
+
+								<#if use_sign_in_modal && !is_signed_in>
+									<span class="sign-in text-default" role="presentation">
+										<a onclick="document.querySelector('#loginCardContainer').style.visibility = 'visible';" class="sign-in text-default"data-redirect="true">
+											<span class="sign-in-label">Log In</span>
+										</a>
+									</span>
+								<#else>
+									<@liferay.user_personal_bar />
+								</#if>
 
 								<#if is_signed_in>
 									<#assign notification_link = "javascript:;" />

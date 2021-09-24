@@ -14,6 +14,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
 
 	<@liferay_util["include"] page=top_head_include />
+
+
+	<#if remember_me && use_sign_in_modal && !is_signed_in>
+    <style>
+        .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .navigation ul li:last-child {
+            bottom: 206px;
+        }
+        
+        .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .login-container fieldset.fieldset .form-group:nth-child(2) {
+            margin-bottom: 1.5rem;
+        }
+
+        .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .login-container fieldset.fieldset .form-group:nth-child(3) {
+            margin-bottom: unset
+        }
+    </style>
+    </#if>
 </head>
 
 <body class="${css_class}">
@@ -47,6 +64,8 @@
 		</section>
 
 		<#include "${full_templates_path}/portal_footer.ftl" />
+
+		<#include "${full_templates_path}/signin_modal.ftl" />		
 	</div>
 </div>
 

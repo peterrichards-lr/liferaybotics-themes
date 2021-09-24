@@ -17,8 +17,6 @@
 <#assign
 	notification_url = commerceThemeMiniumHttpHelper.getNotificationsURL(request)
 	notification_count = commerceThemeMiniumHttpHelper.getNotificationsCount(themeDisplay)
-
-	notification_count = 1
 />
 
 <#if wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))>
@@ -30,3 +28,6 @@
 <#if show_account_selector || show_mini_cart>
 	<#assign portal_content_css_class = portal_content_css_class + " minium-frame" />
 </#if>
+
+<#assign company = theme_display.getCompany() />
+<#assign remember_me = company.isAutoLogin() />
