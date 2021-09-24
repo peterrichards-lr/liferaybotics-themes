@@ -73,6 +73,10 @@
 
 <@liferay_util["include"] page=bottom_include />
 
+<#if enable_sticky_header && !css_class?contains("has-edit-mode-menu")>
+	<script data-senna-track="permanent" id="stickyJS" src="${javascript_folder}/sticky.js" type="text/javascript"></script>
+</#if>
+
 </body>
 
 </html>
