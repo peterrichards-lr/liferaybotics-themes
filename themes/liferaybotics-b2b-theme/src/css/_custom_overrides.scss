@@ -127,18 +127,44 @@ header {
     }
 
     .lower-header {
+        margin-bottom: var(--spacer-5, 3rem);
+
         .navbar {
             @include media-breakpoint-up(lg) {
                 display: none !important;
+            }
+
+            .navbar-toggler {
+                @extend .commerce-topbar-button;
             }
         }
     }
 }
 
 #footer {
-	
+    min-height: calc(#{$siteLogoHeight} + 46px);
+    margin-top: var(--spacer-5, 3rem);
+
 	> .container {
-        @include frontend-token(padding-top, --spacer-3, 1rem);
-        @include frontend-token(padding-bottom, --spacer-3, 1rem);
+        padding-top: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
+        padding-bottom: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
 	}
+}
+
+.mini-cart {
+    &:not(.is-open) {
+        height: 56px;
+
+        @include media-breakpoint-up(md) {
+            height: 76px;
+        }
+    }
+
+    .mini-cart-opener {
+        height: 56px;
+
+        @include media-breakpoint-up(md) {
+            height: 76px;
+        }
+    }
 }

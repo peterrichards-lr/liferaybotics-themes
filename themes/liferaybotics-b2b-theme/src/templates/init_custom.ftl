@@ -26,3 +26,7 @@
 <#else>
 	<#assign portal_content_css_class = "" />
 </#if>
+
+<#if show_account_selector || show_mini_cart>
+	<#assign portal_content_css_class = portal_content_css_class + " minium-frame" />
+</#if>

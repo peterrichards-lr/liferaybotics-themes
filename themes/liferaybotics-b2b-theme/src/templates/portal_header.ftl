@@ -67,9 +67,7 @@
 				</#if>
 
 				<div class="navbar lower-header lower-header-bg lower-header-text-color" id="lowerHeader">
-					<div class="bg-transparent container-fluid">
-						<#include "${full_templates_path}/navigation.ftl" />
-					</div>
+					<#include "${full_templates_path}/navigation.ftl" />
 				</div>
 			</header>
 		</#if>
