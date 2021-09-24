@@ -37,22 +37,22 @@
 								<@liferay.user_personal_bar />
 
 								<#if is_signed_in>
-									<span>
-										<@clay["icon"] symbol="bell-on" />
-									</span>
+									<#assign notification_link = "javascript:;" />
 
-									<#assign otifications_link = "javascript:;"	/>
-
-									<#if notifications_portlet_url??>
-										<#assign notifications_link = notifications_portlet_url.toString() + "&_${notifications_portlet_namespace}_delta=${notifications_delta}&_${notifications_portlet_namespace}_cur=1" />
+									<#if notification_url??>
+										<#assign notification_link = notification_url />
 									</#if>
 
-									<#if notifications_portlet_url?? && notifications_count gt 0>
-										<a href="javascript:;">
-											<span class="badge badge-danger notifications-count">
-												<span class="badge-item badge-item-expand">${notifications_count}</span>
-											</span>
-										</a>
+									<a href="${notification_link}">
+										<span>
+											<@clay["icon"] symbol="bell-on" />
+										</span>
+									</a>
+
+ 									<#if notification_count gt 0>
+										<span class="badge badge-danger notification-count">
+											<span class="badge-item badge-item-expand">${notification_count}</span>
+										</span>
 									</#if>
 								</#if>		
 							</div>
