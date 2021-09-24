@@ -70,7 +70,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "#777",
+							"defaultValue": "#2b395e",
 							"editorType": "ColorPicker",
 							"label": "lower-header-text-color",
 							"mappings": [

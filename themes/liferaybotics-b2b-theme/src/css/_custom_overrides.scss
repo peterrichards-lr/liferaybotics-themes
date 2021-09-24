@@ -165,8 +165,25 @@ header {
         }
     }
 
+    .mini-cart-item-quantity {
+        min-width: 100px;
+    }
+    
+    .mini-cart-wrapper {
+        width: 500px;
+        height: 70%;
+    }
+
     .mini-cart-opener {
         height: 56px;
+
+        &:before {
+            @include frontend-token(background-color, --primary, $primary);
+        }
+
+        svg {
+            @include frontend-token(fill, --lower-header-text-color, $lowerHeaderTextColor);;
+        }
 
         @include media-breakpoint-up(md) {
             height: 76px;
