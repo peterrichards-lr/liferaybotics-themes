@@ -2,6 +2,12 @@
 
 <#include init />
 
+<#assign
+	include_remember_me_css = remember_me && use_sign_in_modal && !is_signed_in 
+	is_widget_page = theme_display.isWidget()
+	include_css = include_remember_me_css || is_widget_page
+/>
+
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
@@ -15,9 +21,15 @@
 
 	<@liferay_util["include"] page=top_head_include />
 
-
-	<#if remember_me && use_sign_in_modal && !is_signed_in>
+	<#if include_css>
     <style>
+		<#if is_widget_page>
+		.liferaybotics-b2b-theme-main-class header .lower-header {
+		        margin-bottom: var(--spacer-5, 3rem);
+		}
+		</#if>
+
+		<#if include_remember_me_css>
         .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .navigation ul li:last-child {
             bottom: 206px;
         }
@@ -27,8 +39,9 @@
         }
 
         .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .login-container fieldset.fieldset .form-group:nth-child(3) {
-            margin-bottom: unset
+            margin-bottom: unset;
         }
+		</#if>
     </style>
     </#if>
 </head>

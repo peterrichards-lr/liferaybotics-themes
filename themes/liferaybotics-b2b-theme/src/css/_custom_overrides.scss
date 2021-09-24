@@ -134,8 +134,6 @@ header {
     }
 
     .lower-header {
-        margin-bottom: var(--spacer-5, 3rem);
-
         .navbar {
             @include media-breakpoint-up(lg) {
                 display: none !important;
