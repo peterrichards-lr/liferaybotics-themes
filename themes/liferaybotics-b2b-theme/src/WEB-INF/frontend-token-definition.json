@@ -3,176 +3,186 @@
 		{
 			"frontendTokenSets": [
 				{
-					"frontendTokenSets": [
+					"frontendTokens": [
 						{
-							"frontendTokens": [
+							"defaultValue": "#2b395e",
+							"editorType": "ColorPicker",
+							"label": "upper-header-background",
+							"mappings": [
 								{
-									"defaultValue": "#2b395e",
-									"editorType": "ColorPicker",
-									"label": "upper-header-background",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "upper-header-background"
-										}
-									],
-									"name": "upperHeaderBackground",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#2b395e",
-									"editorType": "ColorPicker",
-									"label": "upper-header-background-blend",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "upper-header-background-blend"
-										}
-									],
-									"name": "upperHeaderBackgroundBlend",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#fff",
-									"editorType": "ColorPicker",
-									"label": "upper-header-text-color",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "upper-header-text-color"
-										}
-									],
-									"name": "upperHeaderTextColor",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#fff",
-									"editorType": "ColorPicker",
-									"label": "lower-header-background",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "lower-header-background"
-										}
-									],
-									"name": "lowerHeaderBackground",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#fff",
-									"editorType": "ColorPicker",
-									"label": "lower-header-background-blend",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "lower-header-background-blend"
-										}
-									],
-									"name": "lowerHeaderBackgroundBlend",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#646f80",
-									"editorType": "ColorPicker",
-									"label": "lower-header-text-color",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "lower-header-text-color"
-										}
-									],
-									"name": "lowerHeaderTextColor",
-									"type": "String"
-								},
-								{
-									"defaultValue": "row",
-									"label": "lower-header-flex-direction",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "lower-header-flex-direction"
-										}
-									],
-									"name": "lowerHeaderFlexDirection",
-									"type": "String"
-								},
-								{
-									"defaultValue": "24px",
-									"label": "site-logo-height",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "site-logo-height"
-										}
-									],
-									"name": "siteLogoHeight",
-									"type": "String"
-								},
-								{
-									"defaultValue": "auto",
-									"label": "site-logo-width",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "site-logo-width"
-										}
-									],
-									"name": "siteLogoWidth",
-									"type": "String"
+									"type": "cssVariable",
+									"value": "upper-header-background"
 								}
 							],
-							"label": "header",
-							"name": "header"
+							"name": "upperHeaderBackground",
+							"type": "String"
 						},
 						{
-							"frontendTokens": [
+							"defaultValue": "#2b395e",
+							"editorType": "ColorPicker",
+							"label": "upper-header-background-blend",
+							"mappings": [
 								{
-									"defaultValue": "#2b395e",
-									"editorType": "ColorPicker",
-									"label": "footer-background",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "footer-background"
-										}
-									],
-									"name": "footerBackground",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#2b395e",
-									"editorType": "ColorPicker",
-									"label": "footer-background-blend",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "footer-background-blend"
-										}
-									],
-									"name": "footerBackgroundBlend",
-									"type": "String"
-								},
-								{
-									"defaultValue": "#fff",
-									"editorType": "ColorPicker",
-									"label": "footer-text-color",
-									"mappings": [
-										{
-											"type": "cssVariable",
-											"value": "footer-text-color"
-										}
-									],
-									"name": "footerTextColor",
-									"type": "String"
+									"type": "cssVariable",
+									"value": "upper-header-background-blend"
 								}
 							],
-							"label": "footer",
-							"name": "footer"
+							"name": "upperHeaderBackgroundBlend",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#FFF",
+							"editorType": "ColorPicker",
+							"label": "upper-header-text-color",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "upper-header-text-color"
+								}
+							],
+							"name": "upperHeaderTextColor",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#FFF",
+							"editorType": "ColorPicker",
+							"label": "lower-header-background",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "lower-header-background"
+								}
+							],
+							"name": "lowerHeaderBackground",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#FFF",
+							"editorType": "ColorPicker",
+							"label": "lower-header-background-blend",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "lower-header-background-blend"
+								}
+							],
+							"name": "lowerHeaderBackgroundBlend",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#777",
+							"editorType": "ColorPicker",
+							"label": "lower-header-text-color",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "lower-header-text-color"
+								}
+							],
+							"name": "lowerHeaderTextColor",
+							"type": "String"
+						},
+						{
+							"defaultValue": "row",
+							"label": "lower-header-flex-direction",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "lower-header-flex-direction"
+								}
+							],
+							"name": "lowerHeaderFlexDirection",
+							"type": "String",
+							"validValues": [
+								{
+									"label": "row",
+									"value": "row"
+								},
+								{
+									"label": "row-reverse",
+									"value": "row-reverse"
+								}
+							]
+						},
+						{
+							"defaultValue": "24px",
+							"label": "site-logo-height",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "site-logo-height"
+								}
+							],
+							"name": "siteLogoHeight",
+							"type": "String"
+						},
+						{
+							"defaultValue": "auto",
+							"label": "site-logo-width",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "site-logo-width"
+								}
+							],
+							"name": "siteLogoWidth",
+							"type": "String"
 						}
 					],
-					"label": "formed-theme",
-					"name": "formedTheme"
+					"label": "header",
+					"name": "header"
 				},
+				{
+					"frontendTokens": [
+						{
+							"defaultValue": "#2b395e",
+							"editorType": "ColorPicker",
+							"label": "footer-background",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "footer-background"
+								}
+							],
+							"name": "footerBackground",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#2b395e",
+							"editorType": "ColorPicker",
+							"label": "footer-background-blend",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "footer-background-blend"
+								}
+							],
+							"name": "footerBackgroundBlend",
+							"type": "String"
+						},
+						{
+							"defaultValue": "#fff",
+							"editorType": "ColorPicker",
+							"label": "footer-text-color",
+							"mappings": [
+								{
+									"type": "cssVariable",
+									"value": "footer-text-color"
+								}
+							],
+							"name": "footerTextColor",
+							"type": "String"
+						}
+					],
+					"label": "footer",
+					"name": "footer"
+				}
+			],
+			"label": "liferaybotics-b2b",
+			"name": "liferayboticsB2B"
+		},
+		{
+			"frontendTokenSets": [
 				{
 					"frontendTokens": [
 						{
@@ -899,7 +909,7 @@
 							"type": "String"
 						},
 						{
-							"defaultValue": "'Open Sans'",
+							"defaultValue": "'Open Sans', sans-serif",
 							"label": "font-family-base",
 							"mappings": [
 								{
