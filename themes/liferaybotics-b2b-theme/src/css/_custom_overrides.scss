@@ -124,6 +124,10 @@ header {
                         color: inherit;
                         padding: unset;
                     }
+
+                    .child-menu.dropdown-menu {
+                        top: 70%;
+                    }
                 }
             }
         }
