@@ -169,6 +169,10 @@ header {
         @include media-breakpoint-up(md) {
             height: 76px;
         }
+
+        .mini-cart-wrapper {
+            display: none;
+        }
     }
 
     .mini-cart-item-quantity {
