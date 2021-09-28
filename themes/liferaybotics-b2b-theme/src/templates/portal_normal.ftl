@@ -4,7 +4,6 @@
 
 <#assign
 	include_remember_me_css = remember_me && use_sign_in_modal && !is_signed_in 
-	is_widget_page = theme_display.isWidget()
 	include_css = include_remember_me_css || is_widget_page
 />
 

@@ -3,6 +3,8 @@
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 
+	show_breadcrumbs = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-breadcrumbs"))
+
 	show_account_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-account-selector"))
 	show_mini_cart = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-mini-cart"))
 
@@ -19,9 +21,11 @@
 <#assign
 	notification_url = commerceThemeMiniumHttpHelper.getNotificationsURL(request)
 	notification_count = commerceThemeMiniumHttpHelper.getNotificationsCount(themeDisplay)
+
+	is_widget_page = wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))
 />
 
-<#if wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))>
+<#if is_widget_page>
 	<#assign portal_content_css_class = "container" />
 <#else>
 	<#assign portal_content_css_class = "" />
@@ -33,3 +37,8 @@
 
 <#assign company = theme_display.getCompany() />
 <#assign remember_me = company.isAutoLogin() />
+
+<#assign
+	include_remember_me_css = remember_me && use_sign_in_modal && !is_signed_in 
+	include_css = include_remember_me_css || is_widget_page
+/>

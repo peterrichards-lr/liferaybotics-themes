@@ -78,5 +78,11 @@
 				<div class="navbar lower-header lower-header-bg lower-header-text-color" id="lowerHeader">
 					<#include "${full_templates_path}/navigation.ftl" />
 				</div>
+
+				<#if show_breadcrumbs && is_widget_page>
+				<div class="navbar container" id="breadcrumbs">
+					<@liferay.breadcrumbs default_preferences="${preferences}" />
+				</div>
+				</#if>
 			</header>
 		</#if>

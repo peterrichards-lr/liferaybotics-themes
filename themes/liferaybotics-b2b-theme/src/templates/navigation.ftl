@@ -12,7 +12,6 @@
 				<#include "${full_templates_path}/search_bar.ftl" />
 
 				<@liferay.navigation_menu default_preferences="${preferences}" />
-
 			</div>
 		</div>
 	</div>
