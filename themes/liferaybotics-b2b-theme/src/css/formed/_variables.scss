@@ -1,20 +1,20 @@
 // Header
 
-$upperHeaderBackground: #2b395e;
-$upperHeaderBackgroundBlend: #2b395e;
-$upperHeaderTextColor: #fff;
+$upperHeaderBackground: #2b395e !default;
+$upperHeaderBackgroundBlend: #2b395e !default;
+$upperHeaderTextColor: #fff !default;
 
-$siteLogoHeight: 24px;
-$siteLogoWidth: auto;
+$siteLogoHeight: 24px !default;
+$siteLogoWidth: auto !default;
 
-$lowerHeaderBackground: #fff;
-$lowerHeaderBackgroundBlend: #fff;
-$lowerHeaderFlexDirection: row;
-$lowerHeaderTextColor: #2b395e;
+$lowerHeaderBackground: #fff !default;
+$lowerHeaderBackgroundBlend: #fff !default;
+$lowerHeaderFlexDirection: row !default;
+$lowerHeaderTextColor: #2b395e !default;
 
 // Footer
 
-$footerBackground: #2b395e;
-$footerBackgroundBlend: #2b395e;
-$footerTextColor: $white;
-$footerLiferayTextColor: #646f80;
+$footerBackground: #2b395e !default;
+$footerBackgroundBlend: #2b395e !default;
+$footerTextColor: $white !default;
+$footerLiferayTextColor: #646f80 !default;
