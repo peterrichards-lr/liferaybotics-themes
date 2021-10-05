@@ -2,3 +2,9 @@
 	#{$property}: $defaultValue;
 	#{$property}: var($token, $defaultValue);
 }
+@mixin background-cover() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }
