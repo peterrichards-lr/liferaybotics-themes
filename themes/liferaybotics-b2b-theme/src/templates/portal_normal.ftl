@@ -17,9 +17,9 @@
 
 	<#if include_css>
     <style>
-		<#if is_widget_page>
+		<#if is_widget_page && !portal_content_css_class?contains("minium-frame")>
 		.liferaybotics-b2b-theme-main-class header .lower-header {
-		        margin-bottom: var(--spacer-5, 3rem);
+			margin-bottom: var(--spacer-5, 3rem);
 		}
 		</#if>
 
@@ -54,6 +54,9 @@
 	<div class="d-flex flex-column flex-fill liferaybotics-b2b-theme-main-class" id="wrapper">
 		<#include "${full_templates_path}/portal_header.ftl" />
 
+		<#if minium_content_css_class??>
+		<div class="${minium_content_css_class}">
+		</#if>
 		<section class="${portal_content_css_class} flex-fill" id="content">
 			<h2 class="sr-only" role="heading" aria-level="1">${the_title}</h2>
 
@@ -69,6 +72,9 @@
 				</@>
 			</#if>
 		</section>
+		<#if minium_content_css_class??>
+		</div>
+		</#if>
 
 		<#include "${full_templates_path}/portal_footer.ftl" />
 

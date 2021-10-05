@@ -15,6 +15,7 @@
       <setting configurable="true" key="show-mini-cart" type="checkbox" value="false" />
       <setting configurable="true" key="use-sign-in-modal" type="checkbox" value="true" />
       <setting configurable="true" key="enable-sticky-header" type="checkbox" value="true" />
+			<setting configurable="true" key="wide-layout" type="checkbox" value="false" />
       <setting configurable="true" key="show-maximize-minimize-application-links" type="checkbox" value="false"/>
       <setting configurable="false" key="show-site-name-default" value="true"/>
       <setting configurable="false" key="show-site-name-supported" value="true"/>

@@ -12,6 +12,8 @@
 
 	enable_sticky_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("enable-sticky-header"))
 
+	wide_layout = getterUtil.getBoolean(themeDisplay.getThemeSetting("wide-layout"))
+
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
 	show_control_menu = getterUtil.getBoolean(sessionClicks.get(request, "SHOW_CONTROL_MENU", "true"))
 />
@@ -23,6 +25,8 @@
 	notification_count = commerceThemeMiniumHttpHelper.getNotificationsCount(themeDisplay)
 
 	is_widget_page = wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))
+
+	minium_content_css_class = ""
 />
 
 <#if is_widget_page>
@@ -33,6 +37,11 @@
 
 <#if show_account_selector || show_mini_cart>
 	<#assign portal_content_css_class = portal_content_css_class + " minium-frame" />
+
+	<#assign minium_content_css_class = "minium-content" />
+	<#if wide_layout>
+		<#assign minium_content_css_class = minium_content_css_class + " minium-content--wide" />
+	</#if>
 </#if>
 
 <#assign company = theme_display.getCompany() />
