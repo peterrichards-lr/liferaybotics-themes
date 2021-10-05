@@ -61,7 +61,7 @@ header {
                 flex-direction: row;
                 align-items: center;
                 gap: 1rem;
-            
+
                 a {
                     color: inherit;
                 }
@@ -182,7 +182,7 @@ header {
     .mini-cart-item-quantity {
         min-width: 100px;
     }
-    
+
     .mini-cart-wrapper {
         width: 500px;
         height: 70%;
@@ -196,7 +196,7 @@ header {
         }
 
         svg {
-            @include frontend-token(fill, --lower-header-text-color, $lowerHeaderTextColor);;
+            @include frontend-token(fill, --lower-header-text-color, $lowerHeaderTextColor);
         }
 
         @include media-breakpoint-up(md) {
@@ -226,7 +226,7 @@ header {
         @extend .b2b-login-card !optional;
         @extend .card;
 
-        border-radius: .75rem;
+        border-radius: 0.75rem;
         background-color: #ffffff;
         min-width: 300px;
         max-width: 400px;
@@ -239,20 +239,20 @@ header {
 
         label.control-label {
             &:after {
-                content: '*';
+                content: "*";
                 @include frontend-token(color, --primary, $primary);
             }
         }
 
         input.form-control {
-            margin-top: .75rem;
-            border-radius: .5rem;
+            margin-top: 0.75rem;
+            border-radius: 0.5rem;
         }
 
         .button-holder {
             button {
                 width: 100%;
-                border-radius: .25rem;
+                border-radius: 0.25rem;
                 color: transparent;
                 position: relative;
                 margin: unset;
@@ -280,7 +280,7 @@ header {
             ul {
                 li {
                     position: absolute;
-                    font-size: .75rem;
+                    font-size: 0.75rem;
                 }
 
                 li:first-child {
@@ -319,6 +319,43 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+// Styling for the masthead
+section.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-position: center center;
+    @include background-cover;
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-weight: 300;
+    }
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.15rem;
+        }
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 4rem;
         }
     }
 }

@@ -3,7 +3,7 @@
 				<div class="navbar upper-header upper-header-bg upper-header-text-color"  id="upperHeader">
 					<div class="bg-transparent container-fluid px-7">
 						<div class="align-items-center autofit-row">
-							<a class="${logo_css_class} align-items-center d-inline-flex logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+							<a class="${logo_css_class} align-items-center d-inline-flex logo-md" href="${site_default_public_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
 								<img alt="${logo_description}" class="mr-2" height="24" src="${site_logo}" />
 
 								<#if show_site_name>
