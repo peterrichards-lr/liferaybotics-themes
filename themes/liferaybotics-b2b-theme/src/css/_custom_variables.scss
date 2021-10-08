@@ -58,3 +58,8 @@ $placeholder-colors: (
 	#b48ff7,
 	#639dff
 );
+
+root {
+	--table-bg: #{$table-bg};
+	--table-accent-bg: #{$table-accent-bg};
+ }
