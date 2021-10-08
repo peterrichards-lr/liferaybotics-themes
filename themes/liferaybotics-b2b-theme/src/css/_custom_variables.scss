@@ -1,49 +1,52 @@
 $brand-primary: #71d2e8;
 $primary: $brand-primary;
 
-$light-color: theme-color-level($brand-primary, 1) !default;
-$dark-color: theme-color-level($brand-primary, -1) !default;
+$light-color: theme-color-level("primary", 1);
+$dark-color: theme-color-level("primary", -1);
 $complementary-color: complement($brand-primary);
 $invert-color: invert($brand-primary);
+
+$table-bg: $white;
+$table-accent-bg: #FCFCFD;
 
 $brand-info: $light-color;
 $brand-inverse: $invert-color;
 
 $off-white: $gray-300;
 
-$body-bg: #E5E5E5 !default;
-$border-color: $off-white !default;
-$bright-color: $brand-primary !default;
-$input-bg: $off-white !default;
-$btn-outline-secondary-color: $complementary-color !default;
-$portlet-decorate-bg: $white !default;
+$body-bg: #E5E5E5;
+$border-color: $off-white;
+$bright-color: $brand-primary;
+$input-bg: $off-white;
+$btn-outline-secondary-color: $complementary-color;
+$portlet-decorate-bg: $white;
 
 $color-fg: #2b395e;
 $color-fg-alt: $gray-600;
 
 // a lighter shadow for cards specific to Creative
 
-$color-shadow-creative: $off-white !default;
+$color-shadow-creative: $off-white;
 
-$color-bg: $white !default;
-$color-bg-medium: $off-white !default;
-$color-bg-alt: $white !default;
-$color-bg-dark: $dark-color !default;
-$color-border: $border-color !default;
-$color-shadow: rgba($color-bg, 0.14) !default;
-$color-disabled: $gray-500 !default;
+$color-bg: $white;
+$color-bg-medium: $off-white;
+$color-bg-alt: $white;
+$color-bg-dark: $dark-color;
+$color-border: $border-color;
+$color-shadow: rgba($color-bg, 0.14);
+$color-disabled: $gray-500;
 
-$color-theme: $primary !default;
-$color-theme-dark: $dark-color !default;
-$color-theme-light: $light-color !default;
-$color-theme-transparent: rgba($brand-primary, 0.067) !default;
+$color-theme: $primary;
+$color-theme-dark: $dark-color;
+$color-theme-light: $light-color;
+$color-theme-transparent: rgba($brand-primary, 0.067);
 
-$color-modal-mask: rgba($dark-color, 0.6) !default;
+$color-modal-mask: rgba($dark-color, 0.6);
 
-$color-mood-good: $success !default;
-$color-mood-neutral: $warning !default;
-$color-mood-bad: $danger !default;
-$color-mood-bad-bg: $light !default;
+$color-mood-good: $success;
+$color-mood-neutral: $warning;
+$color-mood-bad: $danger;
+$color-mood-bad-bg: $light;
 
 $placeholder-colors: (
 	#9be2bd,

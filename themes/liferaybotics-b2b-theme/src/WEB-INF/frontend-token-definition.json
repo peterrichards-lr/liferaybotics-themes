@@ -595,7 +595,7 @@
 				{
 					"frontendTokens": [
 						{
-							"defaultValue": "#f7f7f8",
+							"defaultValue": "#e5e5e5",
 							"editorType": "ColorPicker",
 							"label": "body-bg",
 							"mappings": [

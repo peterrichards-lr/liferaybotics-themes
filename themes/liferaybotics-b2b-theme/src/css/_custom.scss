@@ -16,8 +16,6 @@
 @import 'custom_mixins';
 
 .liferaybotics-b2b-theme-main-class {
-	background-color: $body-bg;
-
 	@import 'formed/index';
 	@import "./minium/minium";
 	@import 'custom_overrides';
