@@ -59,7 +59,7 @@ $placeholder-colors: (
 	#639dff
 );
 
-root {
+:root {
 	--table-bg: #{$table-bg};
 	--table-accent-bg: #{$table-accent-bg};
  }
