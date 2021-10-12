@@ -384,4 +384,10 @@ section.masthead {
 		overflow-x: hidden;
 		width: 100%;
 	}
+
+    .breadcrumb-item {
+        .active {
+            font-weight: 500;
+        }
+    }
 }
