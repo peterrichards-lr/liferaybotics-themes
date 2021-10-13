@@ -9,9 +9,9 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com"  data-senna-track="permanent">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin  data-senna-track="permanent">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap"  data-senna-track="permanent">
 
 	<@liferay_util["include"] page=top_head_include />
 
