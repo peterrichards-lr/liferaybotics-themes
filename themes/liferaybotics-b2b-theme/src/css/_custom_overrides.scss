@@ -4,36 +4,29 @@ header {
         font-size: 0.875rem;
         line-height: 1.5rem;
         font-weight: 400;
-
         .autofit-row {
             gap: var(--spacer-2, 8px);
             justify-content: space-between;
-
             .navbar-menu {
                 .portlet {
                     margin-bottom: unset;
                 }
             }
-
             .sign-in {
                 background-color: transparent;
-
                 .lexicon-icon {
                     display: none;
                 }
-
                 &-label {
                     white-space: nowrap;
                     line-height: 0.75rem;
                     font-weight: 700;
                     @include frontend-token(color, --primary, $primary);
                 }
-
                 .taglib-icon-label {
                     color: transparent;
                     position: relative;
                     margin: unset;
-
                     &:after {
                         margin-left: -50%;
                         content: "Log In";
@@ -43,42 +36,35 @@ header {
                         @include frontend-token(color, --primary, $primary);
                     }
                 }
-
                 &:hover {
                     text-decoration: none;
                 }
             }
-
             .vl {
                 height: calc((#{$siteLogoHeight} + 46px) / 2);
                 border-right-style: solid;
                 border-right-width: 1px;
                 @include frontend-token(border-right-color, --lower-header-text-color, $lowerHeaderTextColor);
             }
-
             .user-personal-bar {
                 position: relative;
                 flex-direction: row;
                 align-items: center;
                 gap: 1rem;
-
                 a {
                     color: inherit;
                 }
-
                 .notification-count {
                     position: absolute;
                     right: -1rem;
                     top: 0;
                 }
-
                 .user-avatar-link {
                     .badge {
                         display: none;
                     }
                 }
             }
-
             .btn-search {
                 .lexicon-icon {
                     @include frontend-token(fill, --upper-header-text-color, $upperHeaderTextColor);
@@ -86,21 +72,17 @@ header {
                     width: 1rem;
                 }
             }
-
             .custom-logo {
                 color: inherit;
-
                 .site-name {
                     font-size: 1.375rem;
                     line-height: 1.375rem;
                     font-weight: 600;
                 }
-
                 &:hover {
                     text-decoration: none;
                 }
             }
-
             .navbar-site {
                 align-items: center;
                 text-align: center;
@@ -108,22 +90,18 @@ header {
                 font-weight: inherit;
                 justify-content: space-around;
                 margin: 0 2rem;
-
                 .nav-item {
                     height: calc(#{$siteLogoHeight} + 46px);
                     border-color: transparent;
                     border-bottom-style: solid;
                     border-bottom-width: 2px;
-
                     &:hover {
                         @include frontend-token(border-color, --primary, $primary);
                         text-decoration: none;
                     }
-
                     a {
                         color: inherit;
                     }
-
                     .child-menu.dropdown-menu {
                         top: 70%;
                     }
@@ -131,23 +109,19 @@ header {
             }
         }
     }
-
     #searchBar {
         @include media-breakpoint-down(md) {
             display: none !important;
         }
-
         form {
             width: calc(100vw - var(--spacer-2, 0.5rem));
         }
     }
-
     .lower-header {
         .navbar {
             @include media-breakpoint-up(lg) {
                 display: none !important;
             }
-
             .navbar-toggler {
                 @extend .commerce-topbar-button;
             }
@@ -158,8 +132,7 @@ header {
 #footer {
     min-height: calc(#{$siteLogoHeight} + 46px);
     margin-top: var(--spacer-5, 3rem);
-
-    > .container {
+    >.container {
         padding-top: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
         padding-bottom: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
     }
@@ -168,36 +141,28 @@ header {
 .mini-cart {
     &:not(.is-open) {
         height: 56px;
-
         @include media-breakpoint-up(md) {
             height: 76px;
         }
-
         .mini-cart-wrapper {
             display: none;
         }
     }
-
     .mini-cart-item-quantity {
         min-width: 100px;
     }
-
     .mini-cart-wrapper {
         width: 500px;
         height: 70%;
     }
-
     .mini-cart-opener {
         height: 56px;
-
         &:before {
             @include frontend-token(background-color, --primary, $primary);
         }
-
         svg {
             @include frontend-token(fill, --lower-header-text-color, $lowerHeaderTextColor);
         }
-
         @include media-breakpoint-up(md) {
             height: 76px;
         }
@@ -213,18 +178,15 @@ header {
     top: 0;
     left: 0;
     visibility: hidden;
-
     .close-button {
         margin-left: 90%;
         margin-right: 20px;
         margin-top: 20px;
         position: relative;
     }
-
     #loginCardArea {
         @extend .b2b-login-card !optional;
         @extend .card;
-
         border-radius: 0.75rem;
         background-color: #ffffff;
         min-width: 300px;
@@ -235,19 +197,16 @@ header {
         transform: translate(-50%, 0);
         z-index: 2000;
         padding: 20px;
-
         label.control-label {
             &:after {
                 content: "*";
                 @include frontend-token(color, --primary, $primary);
             }
         }
-
         input.form-control {
             margin-top: 0.75rem;
             border-radius: 0.5rem;
         }
-
         .button-holder {
             button {
                 width: 100%;
@@ -255,7 +214,6 @@ header {
                 color: transparent;
                 position: relative;
                 margin: unset;
-
                 &:after {
                     margin-left: -25%;
                     content: "Log In";
@@ -266,7 +224,6 @@ header {
                 }
             }
         }
-
         .login-container {
             fieldset.fieldset {
                 .form-group:nth-child(2) {
@@ -274,25 +231,20 @@ header {
                 }
             }
         }
-
         .navigation {
             ul {
                 li {
                     position: absolute;
                     font-size: 0.75rem;
                 }
-
                 li:first-child {
                     left: 2.5rem;
                     bottom: -15px;
-
                     a {
                         @include frontend-token(color, --black, $black);
-
                         .taglib-text {
                             @include frontend-token(color, --primary, $primary);
                             content: "Start here";
-
                             &:before {
                                 text-decoration: none;
                                 content: "New account? ";
@@ -302,14 +254,11 @@ header {
                         }
                     }
                 }
-
                 li:last-child {
                     right: 0;
                     bottom: 136px;
-
                     a {
                         @include frontend-token(color, --black, $black);
-
                         .taglib-text::after {
                             content: "?";
                             white-space: nowrap;
@@ -361,33 +310,60 @@ section.masthead {
 
 .minium-frame {
     background-color: transparent;
-
     .minium-card {
         border: solid 1px #cdced9;
     }
 }
 
 .minium-content {
-	color: $color-fg;
-	font-size: 14px;
-	line-height: 1.58;
-	margin: auto;
-	max-width: $content-max-width;
-	padding: $lg-gutter;
-	padding-bottom: 104px;
-	width: 100%;
-
-	&--wide {
-		margin: 0 auto;
-		max-width: 100%;
-		min-width: 100%;
-		overflow-x: hidden;
-		width: 100%;
-	}
-
+    color: $color-fg;
+    font-size: 14px;
+    line-height: 1.58;
+    margin: auto;
+    max-width: $content-max-width;
+    padding: $lg-gutter;
+    padding-bottom: 104px;
+    width: 100%;
+    &--wide {
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+    }
     .breadcrumb-item {
         .active {
             font-weight: 600;
+        }
+    }
+    .minium-frame {
+        .portlet-cp-specification-option-facets {
+            .portlet {
+                margin-bottom: unset;
+                .panel.search-facet {
+                    margin-bottom: 10px;
+                    @include frontend-token(background-color, --white, $white);
+                }
+            }
+        }
+        .portlet-commerce-account-admin .account-management {
+            .panel-body {
+                @include frontend-token(background-color, --white, $white);
+            }
+            .row .col:nth-child(2) {
+                flex-direction: column;
+            }
+        }
+        .btn:not(.btn-unstyled).btn-secondary {
+            &:hover {
+                @include frontend-token(border-color, --primary, $primary);
+            }
+        }
+        .commerce-panel__content:first-child {
+            margin-bottom: 5px;
+        }
+        .portlet-commerce-wish-list-content .lfr-price-column {
+            white-space: nowrap;
         }
     }
 }
