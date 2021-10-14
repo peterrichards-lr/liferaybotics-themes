@@ -337,7 +337,10 @@ section.masthead {
         }
     }
     .minium-frame {
-        .portlet-cp-specification-option-facets {
+        .portlet-cp-specification-option-facets,
+        .portlet-cp-option-facets,
+        .portlet-cp-price-range-facets,
+        .portlet-tag-facet {
             .portlet {
                 margin-bottom: unset;
                 .panel.search-facet {
