@@ -374,7 +374,9 @@ section.masthead {
         }
         button.added-input-item {
             &__delete {
-                margin-left: 5px;
+                background: transparent;
+                border: unset;
+                margin: auto;
             }
         }
     }
@@ -396,6 +398,14 @@ section.masthead {
         width: 16px;
         &:checked {
             @include frontend-token(border-color, --primary, $primary);
+            &:before {
+                content: '\2713';
+                color: var(--primary);
+                position: absolute;
+                font-size: 0.75rem;
+                line-height: 0.75rem;
+                margin: auto 2px;
+            }
         }
     }
 }
