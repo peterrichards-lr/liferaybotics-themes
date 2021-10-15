@@ -7,6 +7,7 @@
 
 	show_account_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-account-selector"))
 	show_mini_cart = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-mini-cart"))
+	use_commerce_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("use-commerce-search"))
 
 	use_sign_in_modal = getterUtil.getBoolean(themeDisplay.getThemeSetting("use-sign-in-modal"))
 
@@ -19,6 +20,7 @@
 />
 
 <#assign show_control_menu = show_control_menu && (permissionChecker.isOmniadmin() || permissionChecker.isGroupAdmin(user_id)) />
+<#assign enable_commerce = show_account_selector || show_mini_cart || (show_header_search && use_commerce_search) />
 
 <#assign
 	notification_url = commerceThemeMiniumHttpHelper.getNotificationsURL(request)
@@ -35,7 +37,7 @@
 	<#assign portal_content_css_class = "" />
 </#if>
 
-<#if show_account_selector || show_mini_cart>
+<#if enable_commerce>
 	<#assign portal_content_css_class = portal_content_css_class + " minium-frame" />
 
 	<#assign minium_content_css_class = "minium-content" />

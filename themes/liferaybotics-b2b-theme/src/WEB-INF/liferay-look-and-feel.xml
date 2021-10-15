@@ -13,6 +13,7 @@
       <setting configurable="true" key="show-breadcrumbs" type="checkbox" value="true"/>
       <setting configurable="true" key="show-account-selector" type="checkbox" value="false" />
       <setting configurable="true" key="show-mini-cart" type="checkbox" value="false" />
+      <setting configurable="true" key="use_commerce_search" type="checkbox" value="false" />
       <setting configurable="true" key="use-sign-in-modal" type="checkbox" value="true" />
       <setting configurable="true" key="enable-sticky-header" type="checkbox" value="true" />
 			<setting configurable="true" key="wide-layout" type="checkbox" value="false" />
