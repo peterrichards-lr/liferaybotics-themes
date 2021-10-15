@@ -382,7 +382,7 @@ section.masthead {
         &__list {
             flex-grow: 1;
             overflow: auto;
-            padding: 0 10px;
+            padding: 20px 10px;
             margin: auto 0;
         }
     }
@@ -421,6 +421,8 @@ section.masthead {
             margin-left: auto;
             padding: 0;
             width: 40px;
+            border: unset;
+            background: unset;
         }
         &__actions {
             display: flex;
@@ -442,4 +444,8 @@ section.masthead {
         top: 50%;
         transform: translate(0, -50%);
     }
+}
+
+.commerce-button.commerce-button--big {
+    margin: 0 10px;
 }
