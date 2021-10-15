@@ -1,33 +1,24 @@
 $brand-primary: #71d2e8;
 $primary: $brand-primary;
-
 $light-color: theme-color-level("primary", 1);
 $dark-color: theme-color-level("primary", -1);
 $complementary-color: complement($brand-primary);
 $invert-color: invert($brand-primary);
-
 $table-bg: $white;
 $table-accent-bg: #f7f8f9;
-
 $brand-info: $light-color;
 $brand-inverse: $invert-color;
-
 $off-white: $gray-300;
-
-$body-bg: #E5E5E5;
+$body-bg: #E0E5EE;
 $border-color: $off-white;
 $bright-color: $brand-primary;
 $input-bg: $off-white;
 $btn-outline-secondary-color: $complementary-color;
 $portlet-decorate-bg: $white;
-
 $color-fg: #2b395e;
 $color-fg-alt: $gray-600;
-
 // a lighter shadow for cards specific to Creative
-
 $color-shadow-creative: $off-white;
-
 $color-bg: $white;
 $color-bg-medium: $off-white;
 $color-bg-alt: $white;
@@ -35,31 +26,17 @@ $color-bg-dark: $dark-color;
 $color-border: $border-color;
 $color-shadow: rgba($color-bg, 0.14);
 $color-disabled: $gray-500;
-
 $color-theme: $primary;
 $color-theme-dark: $dark-color;
 $color-theme-light: $light-color;
 $color-theme-transparent: rgba($brand-primary, 0.067);
-
 $color-modal-mask: rgba($dark-color, 0.6);
-
 $color-mood-good: $success;
 $color-mood-neutral: $warning;
 $color-mood-bad: $danger;
 $color-mood-bad-bg: $light;
-
-$placeholder-colors: (
-	#9be2bd,
-	#b3eff5,
-	#fee4b8,
-	#ffb78c,
-	#ff83a3,
-	#f5b3ef,
-	#b48ff7,
-	#639dff
-);
-
+$placeholder-colors: ( #9be2bd, #b3eff5, #fee4b8, #ffb78c, #ff83a3, #f5b3ef, #b48ff7, #639dff);
 :root {
-	--table-bg: #{$table-bg};
-	--table-accent-bg: #{$table-accent-bg};
- }
+    --table-bg: #{$table-bg};
+    --table-accent-bg: #{$table-accent-bg};
+}

@@ -88,13 +88,14 @@ header {
                 text-align: center;
                 text-transform: capitalize;
                 font-weight: inherit;
-                justify-content: space-around;
-                margin: 0 2rem;
+                justify-content: left;
+                margin: 0 3rem;
                 .nav-item {
                     height: calc(#{$siteLogoHeight} + 46px);
                     border-color: transparent;
                     border-bottom-style: solid;
                     border-bottom-width: 2px;
+                    margin: 0 1rem;
                     &:hover {
                         @include frontend-token(border-color, --primary, $primary);
                         text-decoration: none;
@@ -308,13 +309,6 @@ section.masthead {
     }
 }
 
-.minium-frame {
-    background-color: transparent;
-    .minium-card {
-        border: solid 1px #cdced9;
-    }
-}
-
 .minium-content {
     color: $color-fg;
     font-size: 14px;
@@ -337,6 +331,10 @@ section.masthead {
         }
     }
     .minium-frame {
+        background-color: transparent;
+        .minium-card {
+            border: solid 1px #cdced9;
+        }
         .portlet-cp-specification-option-facets,
         .portlet-cp-option-facets,
         .portlet-cp-price-range-facets,
@@ -367,6 +365,25 @@ section.masthead {
         }
         .portlet-commerce-wish-list-content .lfr-price-column {
             white-space: nowrap;
+        }
+    }
+    .added-input-item {
+        padding: 0;
+        &__text {
+            margin-left: 10px;
+        }
+        button.added-input-item {
+            &__delete {
+                margin-left: 5px;
+            }
+        }
+    }
+    .user-invitation {
+        &__list {
+            flex-grow: 1;
+            overflow: auto;
+            padding: 0 10px;
+            margin: auto 0;
         }
     }
 }
