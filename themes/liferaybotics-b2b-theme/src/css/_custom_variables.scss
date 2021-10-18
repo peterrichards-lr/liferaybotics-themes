@@ -36,7 +36,14 @@ $color-mood-neutral: $warning;
 $color-mood-bad: $danger;
 $color-mood-bad-bg: $light;
 $placeholder-colors: ( #9be2bd, #b3eff5, #fee4b8, #ffb78c, #ff83a3, #f5b3ef, #b48ff7, #639dff);
+$minHeight: 46px;
+$commerceSearchHeight: 67px;
+$controlMenuHeight: 56px;
+$siteLogoHeight: 24px !default;
+$siteLogoWidth: auto !default;
 :root {
     --table-bg: #{$table-bg};
     --table-accent-bg: #{$table-accent-bg};
+    --controlMenuHeight: #{$controlMenuHeight};
+    --topHeight: calc(var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight} + #{$commerceSearchHeight});
 }

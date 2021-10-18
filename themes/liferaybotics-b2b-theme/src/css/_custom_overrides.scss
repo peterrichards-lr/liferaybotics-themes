@@ -1,6 +1,6 @@
 header {
     .upper-header {
-        min-height: calc(#{$siteLogoHeight} + 46px);
+        min-height: calc(var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight});
         font-size: 0.875rem;
         line-height: 1.5rem;
         font-weight: 400;
@@ -41,10 +41,10 @@ header {
                 }
             }
             .vl {
-                height: calc((#{$siteLogoHeight} + 46px) / 2);
+                height: calc((var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight}) / 2);
                 border-right-style: solid;
                 border-right-width: 1px;
-                @include frontend-token(border-right-color, --lower-header-text-color, $lowerHeaderTextColor);
+                @include frontend-token(border-right-color, --upper-header-text-color, $upperHeaderTextColor);
             }
             .user-personal-bar {
                 position: relative;
@@ -91,7 +91,7 @@ header {
                 justify-content: left;
                 margin: 0 3rem;
                 .nav-item {
-                    height: calc(#{$siteLogoHeight} + 46px);
+                    height: calc(var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight});
                     border-color: transparent;
                     border-bottom-style: solid;
                     border-bottom-width: 2px;
@@ -111,11 +111,11 @@ header {
         }
     }
     #searchBar {
+        .portlet-search-bar .portlet {
+            margin-bottom: unset;
+        }
         @include media-breakpoint-down(md) {
             display: none !important;
-        }
-        form {
-            width: calc(100vw - var(--spacer-2, 0.5rem));
         }
     }
     .lower-header {
@@ -131,11 +131,11 @@ header {
 }
 
 #footer {
-    min-height: calc(#{$siteLogoHeight} + 46px);
+    min-height: calc(var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight});
     margin-top: var(--spacer-5, 3rem);
     >.container {
-        padding-top: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
-        padding-bottom: calc(((#{$siteLogoHeight} + 46px) - 1rem) / 2);
+        padding-top: calc(((var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight}) - 1rem) / 2);
+        padding-bottom: calc(((var(--site-logo-height, #{$siteLogoHeight}) + #{$minHeight}) - 1rem) / 2);
     }
 }
 
@@ -309,105 +309,114 @@ section.masthead {
     }
 }
 
-.minium-content {
-    color: $color-fg;
-    font-size: 14px;
-    line-height: 1.58;
-    margin: auto;
-    max-width: $content-max-width;
-    padding: $lg-gutter;
-    padding-bottom: 104px;
-    width: 100%;
-    &--wide {
-        margin: 0 auto;
-        max-width: 100%;
-        min-width: 100%;
-        overflow-x: hidden;
+.minium-frame {
+    background-color: transparent;
+    &__overlay {
+        top: var(--topHeight);
+        padding: unset;
+        z-index: 1030;
+    }
+    .minium-content {
+        color: $color-fg;
+        font-size: 14px;
+        line-height: 1.58;
+        margin: auto;
+        max-width: $content-max-width;
+        padding: $lg-gutter;
+        padding-bottom: 104px;
         width: 100%;
-    }
-    .breadcrumb-item {
-        .active {
-            font-weight: 600;
+        &--wide {
+            margin: 0 auto;
+            max-width: 100%;
+            min-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
         }
-    }
-    .minium-frame {
-        background-color: transparent;
-        .minium-card {
-            border: solid 1px #cdced9;
+        .breadcrumb-item {
+            .active {
+                font-weight: 600;
+            }
         }
-        .portlet-cp-specification-option-facets,
-        .portlet-cp-option-facets,
-        .portlet-cp-price-range-facets,
-        .portlet-tag-facet {
-            .portlet {
-                margin-bottom: unset;
-                .panel.search-facet {
-                    margin-bottom: 10px;
-                    @include frontend-token(background-color, --white, $white);
+        .added-input-item {
+            padding: 0;
+            &__text {
+                margin-left: 10px;
+            }
+            button.added-input-item {
+                &__delete {
+                    background: transparent;
+                    border: unset;
+                    margin: auto;
                 }
             }
         }
-        .portlet-commerce-account-admin .account-management {
-            .panel-body {
+        .user-invitation {
+            &__list {
+                flex-grow: 1;
+                overflow: auto;
+                padding: 20px 10px;
+                margin: auto 0;
+            }
+        }
+        input[type='checkbox'] {
+            -webkit-appearance: none;
+            background: #fff;
+            border: 2px solid lightgrey;
+            border-radius: 4px;
+            height: 16px;
+            position: relative;
+            width: 16px;
+            &:checked {
+                @include frontend-token(border-color, --primary, $primary);
+                &:before {
+                    content: '\2713';
+                    color: var(--primary);
+                    position: absolute;
+                    font-size: 0.75rem;
+                    line-height: 0.75rem;
+                    margin: auto 2px;
+                }
+            }
+        }
+    }
+    .minium-card {
+        border: solid 1px #cdced9;
+    }
+    .portlet-cp-specification-option-facets,
+    .portlet-cp-option-facets,
+    .portlet-cp-price-range-facets,
+    .portlet-tag-facet {
+        .portlet {
+            margin-bottom: unset;
+            .panel.search-facet {
+                margin-bottom: 10px;
                 @include frontend-token(background-color, --white, $white);
             }
-            .row .col:nth-child(2) {
-                flex-direction: column;
-            }
-        }
-        .btn:not(.btn-unstyled).btn-secondary {
-            &:hover {
-                @include frontend-token(border-color, --primary, $primary);
-            }
-        }
-        .commerce-panel__content:first-child {
-            margin-bottom: 5px;
-        }
-        .portlet-commerce-wish-list-content .lfr-price-column {
-            white-space: nowrap;
         }
     }
-    .added-input-item {
-        padding: 0;
-        &__text {
-            margin-left: 10px;
+    .portlet-commerce-account-admin .account-management {
+        .panel-body {
+            @include frontend-token(background-color, --white, $white);
         }
-        button.added-input-item {
-            &__delete {
-                background: transparent;
-                border: unset;
-                margin: auto;
-            }
+        .row .col:nth-child(2) {
+            flex-direction: column;
         }
     }
-    .user-invitation {
-        &__list {
-            flex-grow: 1;
-            overflow: auto;
-            padding: 20px 10px;
-            margin: auto 0;
-        }
-    }
-    input[type='checkbox'] {
-        -webkit-appearance: none;
-        background: #fff;
-        border: 2px solid lightgrey;
-        border-radius: 4px;
-        height: 16px;
-        position: relative;
-        width: 16px;
-        &:checked {
+    .btn:not(.btn-unstyled).btn-secondary {
+        &:hover {
             @include frontend-token(border-color, --primary, $primary);
-            &:before {
-                content: '\2713';
-                color: var(--primary);
-                position: absolute;
-                font-size: 0.75rem;
-                line-height: 0.75rem;
-                margin: auto 2px;
-            }
         }
     }
+    .commerce-panel__content:first-child {
+        margin-bottom: 5px;
+    }
+    .portlet-commerce-wish-list-content .lfr-price-column {
+        white-space: nowrap;
+    }
+}
+
+.minium-frame:not(.has-search) .minium-frame__overlay {
+    display: none;
 }
 
 .commerce-modal-wrapper .modal {
@@ -459,3 +468,16 @@ section.masthead {
 .commerce-button.commerce-button--big {
     margin: 0 10px;
 }
+
+.commerce-search {
+    &__input {
+        @include frontend-token(background-color, --body-bg, $body-bg);
+    }
+    &__button {
+        height: $commerceSearchHeight;
+        width: $commerceSearchHeight;
+        border: unset;
+    }
+}
+
+.commerce-suggestions {}
