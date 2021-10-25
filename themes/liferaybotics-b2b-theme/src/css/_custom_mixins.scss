@@ -11,11 +11,6 @@
 }
 
 @mixin rgba-frontend-token($property, $token, $defaultValue, $alpha) {
-    #{$property}: rgba($defaultValue, var($aplha, 0.067));
-    #{$property}: rgba(var($token, $defaultValue), var($aplha, 0.067));
-}
-
-@mixin level-frontend-token($property, $token, $defaultValue, $level) {
-    #{$property}: theme-color-level($defaultValue, $level);
-    #{$property}: theme-color-level(var($token, $defaultValue), $level);
+    #{$property}: rgba($defaultValue, var($alpha, 0.067));
+    #{$property}: rgba(var($token, $defaultValue), var($alpha, 0.067));
 }

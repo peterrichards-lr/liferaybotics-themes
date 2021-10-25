@@ -37,7 +37,7 @@
             font-size: 14px;
         }
         &.active {
-            @include level-frontend-token(border-color, --primary, $color-theme-light, 1);
+            border-color: $color-theme-light;
         }
         .label-item-after {
             background: $border-color;

@@ -56,13 +56,13 @@
 										<span>
 											<@clay["icon"] symbol="bell-on" />
 										</span>
-									</a>
 
- 									<#if notification_count gt 0>
-										<span class="badge badge-danger notification-count">
-											<span class="badge-item badge-item-expand">${notification_count}</span>
-										</span>
-									</#if>
+										<#if notification_count gt 0>
+											<span class="badge notification-count">
+												<span class="badge-item badge-item-expand">${notification_count}</span>
+											</span>
+										</#if>
+									</a>
 								</#if>		
 							</div>
 						</div>
