@@ -3,7 +3,7 @@ A refresh theme for the Liferaybotics Manufacturing Demo which offers a great to
 
 While this theme was built with Liferay Commerce in mind, the menu is configurable and therefore it can also be used for Liferay DXP sites as well.
 
-![products](https://github.com/peterrichards-lr/liferaybotics-themes/images/products.png?raw=true)
+![products](https://github.com/peterrichards-lr/liferaybotics-themes/blob/master/images/products.png?raw=true)
 
 ## Getting Started
 You can either:
@@ -17,9 +17,9 @@ Or:
 - Move the WAR to the `deploy` folder under your Liferay home.
 
 ## Screenshots
-![dashboard](https://github.com/peterrichards-lr/liferaybotics-themes/images/dashboard.png?raw=true)
+![dashboard](https://github.com/peterrichards-lr/liferaybotics-themes/blob/master/images/dashboard.png?raw=true)
 
-![search](https://github.com/peterrichards-lr/liferaybotics-themes/images/search.png?raw=true)
+![search](https://github.com/peterrichards-lr/liferaybotics-themes/blob/master/images/search.png?raw=true)
 
 ## License
 [MIT](LICENSE)
