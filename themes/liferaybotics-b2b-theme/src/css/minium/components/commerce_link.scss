@@ -1,4 +1,4 @@
 .commerce-link {
-	color: $color-theme;
-	font-size: 12px;
+    @include frontend-token(color, --primary, $color-theme);
+    font-size: 12px;
 }

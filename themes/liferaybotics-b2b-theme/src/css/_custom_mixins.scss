@@ -1,10 +1,21 @@
 @mixin frontend-token($property, $token, $defaultValue) {
-	#{$property}: $defaultValue;
-	#{$property}: var($token, $defaultValue);
+    #{$property}: $defaultValue;
+    #{$property}: var($token, $defaultValue);
 }
+
 @mixin background-cover() {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-  }
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin rgba-frontend-token($property, $token, $defaultValue, $alpha) {
+    #{$property}: rgba($defaultValue, var($aplha, 0.067));
+    #{$property}: rgba(var($token, $defaultValue), var($aplha, 0.067));
+}
+
+@mixin level-frontend-token($property, $token, $defaultValue, $level) {
+    #{$property}: theme-color-level($defaultValue, $level);
+    #{$property}: theme-color-level(var($token, $defaultValue), $level);
+}
