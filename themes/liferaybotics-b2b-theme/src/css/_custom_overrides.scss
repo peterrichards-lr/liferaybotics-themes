@@ -110,6 +110,9 @@ header {
                 }
             }
         }
+        &.navbar {
+            padding: unset;
+        }
     }
     #searchBar {
         .portlet-search-bar .portlet {
@@ -120,7 +123,10 @@ header {
         }
     }
     .lower-header {
-        .navbar {
+        &.navbar {
+            padding: unset;
+        }
+        .navbar {            
             @include media-breakpoint-up(lg) {
                 display: none !important;
             }
@@ -241,7 +247,7 @@ header {
                 }
                 li:first-child {
                     left: 2.5rem;
-                    bottom: -15px;
+                    bottom: -25px;
                     a {
                         @include frontend-token(color, --black, $black);
                         .taglib-text {

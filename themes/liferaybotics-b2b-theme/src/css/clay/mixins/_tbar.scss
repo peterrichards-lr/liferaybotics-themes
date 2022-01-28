@@ -73,10 +73,8 @@
 			background-color:
 				setter(
 					map-get($map, bg),
-					setter(
-						map-get($map, bg-color),
-						map-get($map, background-color)
-					)
+					map-get($map, bg-color),
+					map-get($map, background-color)
 				),
 			padding-bottom:
 				setter(map-get($map, padding-y), map-get($map, padding-bottom)),
@@ -192,6 +190,15 @@
 	$btn-c-inner: setter(map-get($map, btn-c-inner), ());
 	$btn-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign(map-get($btn, padding-bottom)),
 			margin-left: math-sign(map-get($btn, padding-left)),
 			margin-right: math-sign(map-get($btn, padding-right)),
@@ -222,10 +229,8 @@
 			height:
 				setter(
 					map-get($map, btn-monospaced-size),
-					setter(
-						map-get($btn-monospaced, height),
-						map-get($btn, height)
-					)
+					map-get($btn-monospaced, height),
+					map-get($btn, height)
 				),
 			margin-bottom:
 				setter(
@@ -255,10 +260,8 @@
 			width:
 				setter(
 					map-get($map, btn-monospaced-size),
-					setter(
-						map-get($btn-monospaced, width),
-						map-get($btn, height)
-					)
+					map-get($btn-monospaced, width),
+					map-get($btn, height)
 				),
 		)
 	);
@@ -266,6 +269,15 @@
 	$btn-monospaced-c-inner: setter(map-get($map, btn-monospaced-c-inner), ());
 	$btn-monospaced-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin: math-sign(map-get($btn-monospaced, padding)),
 		),
 		$btn-monospaced-c-inner
@@ -318,6 +330,15 @@
 	$link-c-inner: setter(map-get($map, link-c-inner), ());
 	$link-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign(map-get($link, padding-bottom)),
 			margin-left: math-sign(map-get($link, padding-left)),
 			margin-right: math-sign(map-get($link, padding-right)),
@@ -389,6 +410,15 @@
 	);
 	$link-monospaced-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin: math-sign(map-get($link-monospaced, padding)),
 		),
 		$link-monospaced-c-inner
@@ -455,7 +485,7 @@
 	.tbar-btn {
 		@include clay-button-variant($btn);
 
-		@if ($enable-c-inner) {
+		@if (map-get($btn-c-inner, enabled)) {
 			.c-inner {
 				@include clay-css($btn-c-inner);
 			}
@@ -465,7 +495,7 @@
 	.tbar-link {
 		@include clay-link($link);
 
-		@if ($enable-c-inner) {
+		@if (map-get($link-c-inner, enabled)) {
 			.c-inner {
 				@include clay-css($link-c-inner);
 			}
@@ -475,7 +505,7 @@
 	.tbar-btn-monospaced {
 		@include clay-button-variant($btn-monospaced);
 
-		@if ($enable-c-inner) {
+		@if (map-get($btn-monospaced-c-inner, enabled)) {
 			.c-inner {
 				@include clay-css($btn-monospaced-c-inner);
 			}
@@ -489,7 +519,7 @@
 	.tbar-link-monospaced {
 		@include clay-link($link-monospaced);
 
-		@if ($enable-c-inner) {
+		@if (map-get($link-monospaced-c-inner, enabled)) {
 			.c-inner {
 				@include clay-css($link-monospaced-c-inner);
 			}

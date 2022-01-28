@@ -1,6 +1,6 @@
 $table-bg: $white !default;
 $table-accent-bg: $gray-100 !default;
-$table-hover-bg: lighten($component-active-bg, 44.9) !default;
+$table-hover-bg: clay-lighten($component-active-bg, 44.9) !default;
 $table-border-color: $gray-300 !default;
 $table-font-size: 0.875rem !default;
 
@@ -17,12 +17,38 @@ $table-head-link: map-deep-merge(
 		border-radius: 1px,
 		color: $gray-600,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$table-head-link
 );
+
+// Table Body
+
+$c-table-tbody: () !default;
+$c-table-tbody: map-merge(
+	(
+		background-color: $white,
+	),
+	$c-table-tbody
+);
+
+// Table Footer
+
+$c-table-tfoot: () !default;
+$c-table-tfoot: map-merge(
+	(
+		background-color: $table-bg,
+	),
+	$c-table-tfoot
+);
+
+$table-caption-color: $gray-900 !default;
 
 $table-divider-bg: $gray-100 !default;
 $table-divider-color: $gray-600 !default;
@@ -45,8 +71,10 @@ $table-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$table-title-link
 );
@@ -68,13 +96,19 @@ $table-action-link: map-deep-merge(
 		color: $gray-600,
 		font-size: 1rem,
 		transition: $btn-transition,
-		hover-bg: rgba(0, 0, 0, 0.02),
-		hover-color: $gray-900,
-		focus-bg: rgba(0, 0, 0, 0.02),
-		focus-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		active-bg: rgba(0, 0, 0, 0.04),
+		hover: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+		),
+		focus: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: rgba(0, 0, 0, 0.04),
+		),
 	),
 	$table-action-link
 );
@@ -89,9 +123,13 @@ $table-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$table-link
 );
@@ -108,8 +146,6 @@ $table-list-active-bg: $table-list-hover-bg !default;
 $table-list-disabled-color: $gray-500 !default;
 
 $table-list-head-bg: $white !default;
-
-$table-list-link-color: $gray-600 !default;
 
 $table-list-divider-padding-x: 0.75rem !default; // 12px
 $table-list-divider-padding-y: 0.4375rem !default; // 7px
@@ -134,9 +170,13 @@ $table-list-title-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$table-list-title-link
 );
@@ -151,9 +191,13 @@ $table-list-link: map-deep-merge(
 		display: inline-block,
 		max-width: 100%,
 		transition: box-shadow 0.15s ease-in-out,
-		hover-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
+		hover: (
+			color: $gray-900,
+		),
+		focus: (
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
 	),
 	$table-list-link
 );
@@ -166,13 +210,19 @@ $table-list-action-link: map-deep-merge(
 		color: $gray-600,
 		font-size: 1rem,
 		transition: $btn-transition,
-		hover-bg: rgba(0, 0, 0, 0.02),
-		hover-color: $gray-900,
-		focus-bg: rgba(0, 0, 0, 0.02),
-		focus-color: $gray-900,
-		focus-box-shadow: $component-focus-box-shadow,
-		focus-outline: 0,
-		active-bg: rgba(0, 0, 0, 0.04),
+		hover: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+		),
+		focus: (
+			background-color: rgba(0, 0, 0, 0.02),
+			color: $gray-900,
+			box-shadow: $component-focus-box-shadow,
+			outline: 0,
+		),
+		active: (
+			background-color: rgba(0, 0, 0, 0.04),
+		),
 	),
 	$table-list-action-link
 );

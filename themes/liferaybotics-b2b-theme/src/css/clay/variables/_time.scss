@@ -34,8 +34,12 @@ $clay-time-form-control-inset: map-deep-merge(
 		margin-top: 0,
 		text-align: center,
 		width: 1.25rem,
-		selection-bg: transparent,
-		focus-bg: #b3d8fd,
+		selection: (
+			background-color: transparent,
+		),
+		focus: (
+			background-color: #b3d8fd,
+		),
 	),
 	$clay-time-form-control-inset
 );
@@ -64,12 +68,14 @@ $clay-time-input-group-text: map-deep-merge(
 	$clay-time-input-group-text
 );
 
-$clay-time-divider-margin-left: -3px !default;
-$clay-time-divider-margin-right: -3px !default;
+$clay-time-divider-margin-left: null !default;
+$clay-time-divider-margin-right: null !default;
 
 $clay-time-edit: () !default;
 $clay-time-edit: map-deep-merge(
 	(
+		display: flex,
+		flex-wrap: wrap,
 		margin-right: auto,
 		padding-left: 0.5rem,
 		padding-right: 0.5rem,

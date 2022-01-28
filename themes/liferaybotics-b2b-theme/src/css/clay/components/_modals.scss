@@ -179,40 +179,24 @@
 }
 
 .modal-header {
-	align-items: center;
-	background-color: $modal-header-bg;
-	border-color: $modal-header-border-color;
-	border-style: solid;
-	border-width: 0 0 $modal-header-border-width 0;
+	$breakpoint-down: map-get($modal-header, breakpoint-down);
 
-	@include border-top-radius($modal-content-inner-border-radius);
+	@include clay-css($modal-header);
 
-	color: $modal-header-color;
-	display: flex;
-	flex-shrink: 0;
-	height: $modal-header-height;
-	justify-content: space-between;
-	padding: $modal-header-padding;
-	padding-bottom: 0;
-	padding-top: 0;
+	@include clay-scale-component(null, $breakpoint-down) {
+		$mobile: setter(map-get($modal-header, mobile), ());
 
-	@include clay-scale-component {
-		height: $modal-header-height-mobile;
+		@include clay-css($mobile);
 	}
 }
 
 .modal-body {
-	background-color: $modal-body-bg;
-	color: $modal-body-color;
-	flex-grow: 1;
-	flex-shrink: 1;
-	padding: $modal-inner-padding;
-	position: relative;
+	@include clay-css($modal-body);
 
 	&.inline-scroller {
-		-webkit-overflow-scrolling: touch;
-		overflow: auto;
-		padding: $modal-inner-padding;
+		$inline-scroller: setter(map-get($modal-body, inline-scroller), ());
+
+		@include clay-css($inline-scroller);
 	}
 }
 
@@ -244,7 +228,7 @@
 	}
 
 	> * {
-		margin: $modal-footer-margin-between / 2;
+		margin: $modal-footer-margin-between * 0.5;
 	}
 }
 
@@ -340,11 +324,11 @@
 
 .modal .close {
 	&:first-child {
-		margin-left: -$modal-close-spacer-x;
+		margin-left: math-sign($modal-close-spacer-x);
 	}
 
 	&:last-child {
-		margin-right: -$modal-close-spacer-x;
+		margin-right: math-sign($modal-close-spacer-x);
 	}
 }
 
@@ -469,7 +453,7 @@
 			height: 100%;
 			left: 50%;
 			margin-bottom: 0;
-			margin-left: -$modal-md / 2;
+			margin-left: calc(#{math-sign($modal-md)} / 2);
 			margin-right: 0;
 			margin-top: 0;
 			top: 0;
@@ -477,23 +461,23 @@
 
 		&.modal-sm {
 			@include media-breakpoint-up(sm) {
-				margin-left: -$modal-sm / 2;
+				margin-left: calc(#{math-sign($modal-sm)} / 2);
 			}
 		}
 
 		&.modal-lg {
 			@include media-breakpoint-up(lg) {
-				margin-left: -$modal-lg / 2;
+				margin-left: calc(#{math-sign($modal-lg)} / 2);
 			}
 		}
 
 		&.modal-xl {
 			@include media-breakpoint-up(lg) {
-				margin-left: -$modal-lg / 2;
+				margin-left: calc(#{math-sign($modal-lg)} / 2);
 			}
 
 			@include media-breakpoint-up(xl) {
-				margin-left: -$modal-xl / 2;
+				margin-left: calc(#{math-sign($modal-xl)} / 2);
 			}
 		}
 	}

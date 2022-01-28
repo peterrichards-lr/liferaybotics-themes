@@ -292,6 +292,9 @@ $subnav-tbar: map-deep-merge(
 		component-link: $subnav-tbar-component-link,
 		component-title: $subnav-tbar-component-title,
 		component-text: $subnav-tbar-component-text,
+		component-label: (
+			font-weight: $font-weight-normal,
+		),
 		link-margin-y: 0.125rem,
 		link-padding-x: 0.25rem,
 		link-padding-y: 0.09375rem,
@@ -390,7 +393,7 @@ $subnav-tbar-primary-disabled-component-label: map-deep-merge(
 $subnav-tbar-primary-disabled: () !default;
 $subnav-tbar-primary-disabled: map-deep-merge(
 	(
-		bg-color: lighten(desaturate($primary, 27.03), 37.06),
+		bg-color: clay-lighten(clay-desaturate($primary, 27.03), 37.06),
 		color: #6c757d,
 		component-label: $subnav-tbar-primary-disabled-component-label,
 	),

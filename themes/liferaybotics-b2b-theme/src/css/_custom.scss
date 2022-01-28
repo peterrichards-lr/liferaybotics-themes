@@ -5,12 +5,12 @@
 @import 'components/info-panel';
 @import 'components/navbars';
 @import 'components/sidebar';
-@import 'components/splitter';
 @import 'components/table';
 @import 'components/widget';
 @import 'portlet/portlet';
 @import 'portlet/portlet_decorators';
-@import 'portlet/portlet_hello_world';
+
+@import 'custom_properties/custom_properties_set';
 
 @import 'custom_properties';
 @import 'custom_mixins';

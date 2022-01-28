@@ -25,7 +25,7 @@
 
 		<#if include_remember_me_css>
         .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .navigation ul li:last-child {
-            bottom: 206px;
+            bottom: 166px;
         }
         
         .liferaybotics-b2b-theme-main-class #loginCardContainer #loginCardArea .login-container fieldset.fieldset .form-group:nth-child(2) {

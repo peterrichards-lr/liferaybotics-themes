@@ -4,7 +4,7 @@ $sidebar-header-component-title: () !default;
 $sidebar-header-component-title: map-deep-merge(
 	(
 		// 20px
-			font-size: 1.25rem
+		font-size: 1.25rem
 	),
 	$sidebar-header-component-title
 );
@@ -73,7 +73,7 @@ $sidebar-light: map-deep-merge(
 $sidebar-light-navigation-bar: () !default;
 $sidebar-light-navigation-bar: map-deep-merge(
 	(
-		bg: $white,
+		background-color: $white,
 		border-color: $secondary-l2,
 	),
 	$sidebar-light-navigation-bar

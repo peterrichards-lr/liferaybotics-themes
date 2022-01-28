@@ -139,7 +139,9 @@
 		)
 	);
 
-	$header-collapsed: setter(map-get($map, header-collapsed), ());
+	$old-header-collapsed: setter(map-get($map, header-collapsed), ());
+	$header-collapsed: setter(map-get($header, collapsed), ());
+	$header-collapsed: map-merge($header-collapsed, $old-header-collapsed);
 	$header-collapsed: map-merge(
 		$header-collapsed,
 		(
@@ -151,9 +153,19 @@
 		)
 	);
 
-	$header-c-inner: setter(map-get($map, header-c-inner), ());
+	$old-header-c-inner: setter(map-get($map, header-c-inner), ());
+	$header-c-inner: setter(map-get($header, c-inner), ());
 	$header-c-inner: map-merge(
 		(
+			enabled:
+				setter(
+					if(
+						variable-exists(enable-c-inner),
+						$enable-c-inner,
+						$cadmin-enable-c-inner
+					),
+					true
+				),
 			margin-bottom: math-sign(map-get($header, padding-bottom)),
 			margin-left: math-sign(map-get($header, padding-left)),
 			margin-right: math-sign(map-get($header, padding-right)),
@@ -162,7 +174,9 @@
 		$header-c-inner
 	);
 
-	$header-link: setter(map-get($map, header-link), ());
+	$old-header-link: setter(map-get($map, header-link), ());
+	$header-link: setter(map-get($header, link), ());
+	$header-link: map-deep-merge($header-link, $old-header-link);
 
 	$title: setter(map-get($map, title), ());
 	$title: map-merge(
@@ -289,7 +303,7 @@
 		.panel-header {
 			@include clay-css($header);
 
-			@if ($enable-c-inner) {
+			@if (map-get($header-c-inner, enabled)) {
 				.c-inner {
 					@include clay-css($header-c-inner);
 				}
