@@ -57,7 +57,7 @@
 											<@clay["icon"] symbol="bell-on" />
 										</span>
 
-										<#if notification_count gt 0>
+										<#if notification_count?? && notification_count?is_number && notification_count gt 0>
 											<span class="badge notification-count">
 												<span class="badge-item badge-item-expand">${notification_count}</span>
 											</span>

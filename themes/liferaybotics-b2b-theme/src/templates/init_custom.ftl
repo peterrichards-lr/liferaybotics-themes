@@ -13,21 +13,28 @@
 
 	enable_sticky_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("enable-sticky-header"))
 
+	use_default_control_menu_behaviour = getterUtil.getBoolean(themeDisplay.getThemeSetting("use-default-control-menu-behaviour"))
+
 	wide_layout = getterUtil.getBoolean(themeDisplay.getThemeSetting("wide-layout"))
 
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
 	show_control_menu = getterUtil.getBoolean(sessionClicks.get(request, "SHOW_CONTROL_MENU", "true"))
 />
 
-<#assign show_control_menu = show_control_menu && (permissionChecker.isOmniadmin() || permissionChecker.isGroupAdmin(user_id)) />
+<#assign show_control_menu = show_control_menu || !use_default_control_menu_behaviour && (permissionChecker.isOmniadmin() || permissionChecker.isGroupAdmin(user_id)) />
 <#assign enable_commerce = show_account_selector || show_mini_cart || (show_header_search && use_commerce_search) />
 
+<#attempt>
+	<#assign
+		notification_url = commerceThemeMiniumHttpHelper.getNotificationsURL(request)
+		notification_count = commerceThemeMiniumHttpHelper.getNotificationsCount(themeDisplay)
+	/>
+<#recover>
+	<#assign notification_count = 0 />
+</#attempt>
+
 <#assign
-	notification_url = commerceThemeMiniumHttpHelper.getNotificationsURL(request)
-	notification_count = commerceThemeMiniumHttpHelper.getNotificationsCount(themeDisplay)
-
 	is_widget_page = wrap_widget_page_content && ((layout.isTypeContent() && themeDisplay.isStateMaximized()) || (layout.getType() == "portlet"))
-
 	minium_content_css_class = ""
 />
 

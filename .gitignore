@@ -5,3 +5,4 @@ themes/**/liferay-theme.json
 themes/**/.web_bundle_build
 themes/**/.yo-rc.json
 .DS_Store
+.idea
